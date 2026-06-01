@@ -1,0 +1,130 @@
+/* Обнуляем стандартные отступы браузера */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./public/a583a5e1af39a4dce995d74a93258dcd98c4d182.jpeg"); 
+  background-size: cover;
+  background-position: center;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  min-width: 1280px;
+
+  height: 924px;
+  opacity: 1;
+  padding-top: 32px;
+  padding-right: 80px;
+  padding-bottom: 32px;
+  padding-left: 80px;
+  gap: 32px;
+}
+
+.weather-app {
+  width: 1120px;
+  height: 860px;
+  border-radius: 8px;
+
+  opacity: 1;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #7070701a;
+  backdrop-filter: blur(50px);
+}
+
+.weather-header {
+  width: 1120px;
+  height: 112px;
+  opacity: 1;
+  gap: 358px;
+  padding: 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  z-index: 10;
+}
+
+.logo-img {
+  width: 300px;
+  height: 100px;
+  opacity: 1;
+  border-radius: 8px;
+}
+
+.search-input {
+  /* width: 506px;
+  height: 48px;
+
+  padding: 12px 48px 12px 16px;
+
+  background: #f5f4f466;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0px;
+
+  color: #707070; */
+}
+
+.search-input::placeholder {
+  color: #707070;
+  font-family: "Raleway", sans-serif;
+}
+
+/* .search-button {
+    position: absolute;
+    right: 50px;       
+    top: 50%;         
+    transform: translateY(-50%);
+    
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.icon-search {
+  display: block;
+}
+
+.icon-close {
+  display: none; 
+}
+
+.search-wrapper:focus-within .icon-search {
+  display: none; 
+}
+
+.search-wrapper:focus-within .icon-close {
+  display: block;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  transition: all 0.2s ease; 
+}

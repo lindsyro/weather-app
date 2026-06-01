@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Sprint 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="weather-app">
+      
+      <header class="weather-header">
+        <a href="/" class="logo-link">
+          <img src="public/Desktop & Tablet.svg" class="logo-img">
+        </a>
+          <form class="search-form">
+              <!-- <input type="text" class="search-input" placeholder="Поиск по городу" aria-label="Поиск города"> -->
+              <!-- <button type="submit" class="search-button">
+                  <img src="public/search.png" alt="Поиск" class="search-icon icon-search">
+                  <img src="public/close.svg" alt="Очистить" class="search-icon icon-close">
+              </button> -->
+          </form>
+      </header>
+
+      <section class="current-weather">
+          <h1 class="city-name">Москва</h1>
+          <p class="weather-date">Воскресенье, 31 мая</p>
+          
+          <div class="weather-info">
+              <img src="icons/sun.svg" alt="Ясно" class="main-weather-icon">
+              <span class="temperature">+22°C</span>
+          </div>
+          
+          <p class="weather-condition">Ясно, без осадков</p>
+      </section>
+
+      <section class="hourly-forecast">
+          <h2>Прогноз на сегодня</h2>
+          <div class="hourly-list">
+              <div class="hourly-item">
+                  <span class="time">12:00</span>
+                  <img src="icons/sun.svg" alt="Ясно">
+                  <span class="hourly-temp">+22°</span>
+              </div>
+              <div class="hourly-item">
+                  <span class="time">15:00</span>
+                  <img src="icons/cloud.svg" alt="Облачно">
+                  <span class="hourly-temp">+24°</span>
+              </div>
+          </div>
+      </section>
+
+      <section class="weather-details">
+          <div class="detail-card">
+              <img src="icons/wind.svg" alt="Ветер">
+              <div class="detail-info">
+                  <span class="detail-label">Ветер</span>
+                  <span class="detail-value">4 м/с, С-В</span>
+              </div>
+          </div>
+          <div class="detail-card">
+              <img src="icons/humidity.svg" alt="Влажность">
+              <div class="detail-info">
+                  <span class="detail-label">Влажность</span>
+                  <span class="detail-value">62%</span>
+              </div>
+          </div>
+          <div class="detail-card">
+              <img src="icons/pressure.svg" alt="Давление">
+              <div class="detail-info">
+                  <span class="detail-label">Давление</span>
+                  <span class="detail-value">752 мм рт. ст.</span>
+              </div>
+          </div>
+      </section>
+
+  </main>
+
+</body>
+</html>
