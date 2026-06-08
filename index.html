@@ -5,56 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App - Sprint 1</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
+    <main class="weather-app">
+    
+        <header class="weather-app__header">
+            <a href="/" class="logo">
+                <img src="public/Desktop & Tablet.svg" class="logo__img" alt="Логотип">
+            </a>
+            
+            <form class="search">
+                <input type="text" class="search__input" placeholder="Поиск по городу" aria-label="Поиск города"> 
+                <button type="submit" class="search__button">
+                    <img src="public/search.png" alt="Поиск" class="search__icon search__icon_type_search">
+                    <img src="public/close.svg" alt="Очистить" class="search__icon search__icon_type_close">
+                </button> 
+            </form>
+        </header>
 
-  <main class="weather-app">
-      
-      <header class="weather-header">
-        <a href="/" class="logo-link">
-          <img src="public/Desktop & Tablet.svg" class="logo-img">
-        </a>
-          <form class="search-form">
-              <input type="text" class="search-input" placeholder="Поиск по городу" aria-label="Поиск города"> 
-              <button type="submit" class="search-button">
-                  <img src="public/search.png" alt="Поиск" class="search-icon icon-search">
-                  <img src="public/close.svg" alt="Очистить" class="search-icon icon-close">
-              </button> 
-          </form>
-      </header>
+        <div class="weather-app__today">
 
-      <div class="weather-today">
+            <section class="weather-info">
+                <div class="weather-info__location">
+                    <h1 class="weather-info__city">Москва</h1>
+                    <p class="weather-info__date">Суббота, 06 января</p>
+                    <p class="weather-info__time">11:29</p>
+                </div>
+                
+                <div class="weather-info__temp">
+                    <p class="weather-info__degrees">-7°</p>
+                </div>
+                
+                <div class="weather-info__meta">
+                    <p class="weather-info__cloudiness">
+                        <img src="public/weather.svg" alt="" class="weather-info__icon">
+                        Облачно
+                    </p>
+                    <p class="weather-info__feel"> Ощущается как -11° </p>
+                </div>
+            </section>
 
-        <section class="weather-today-info">
-            <div class="">
-                <h1 class="weather-city">Москва</h1>
-                <p class="weather-date">Суббота, 06 января</p>
-                <p class="weather-time">11:29</p>
-            </div>
-                <div class="weather-temp">
-                <p class="degrees">-7°</p>
-            </div>
-             
-            <div class="weather-other-info">
-                <p class="weather-other-info-cloudiness">
-                    <img src="public/weather.svg" alt="" class="weather-icon">
-                    Облачно
-                </p>
-                <p class="weather-other-info-feel"> Ощущается как -11° </p>
-            </div>
-        </section>
+            <section class="weather-details">
+                <div class="weather-details__card"></div>
+                <div class="weather-details__card"></div>
+                <div class="weather-details__card"></div>
+                <div class="weather-details__card"></div>
+                <div class="weather-details__card"></div>
+                <div class="weather-details__card"></div>
+            </section>
 
-        <section class="weather-more-details">
-          <div class="tablet"></div>
-          <div class="tablet"></div>
-          <div class="tablet"></div>
-          <div class="tablet"></div>
-          <div class="tablet"></div>
-          <div class="tablet"></div>
-        </section>
-
-      </div>
-  </main>
-
+        </div>
+    </main>
 </body>
 </html>

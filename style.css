@@ -8,252 +8,191 @@ body {
   background-image: url("./public/a583a5e1af39a4dce995d74a93258dcd98c4d182.jpeg");
   background-size: cover;
   background-position: center;
-
   background-attachment: fixed;
   background-repeat: no-repeat;
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
   min-width: 1280px;
-
   height: 924px;
   opacity: 1;
-  padding-top: 32px;
-  padding-right: 80px;
-  padding-bottom: 32px;
-  padding-left: 80px;
+  padding: 32px 80px;
   gap: 32px;
 }
 
+/* Блок приложения */
 .weather-app {
   width: 1120px;
   height: 860px;
   border-radius: 8px;
-
-  opacity: 1;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
-
   background: #7070701a;
   backdrop-filter: blur(50px);
 }
 
-.weather-header {
+/* Шапка — элемент блока weather-app */
+.weather-app__header {
   width: 1120px;
   height: 112px;
-  opacity: 1;
   gap: 358px;
   padding: 32px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   position: relative;
   z-index: 10;
 }
 
-.logo-img {
+/* Главный экран — элемент блока weather-app */
+.weather-app__today {
+  width: 1120px;
+  height: 472px;
+  padding: 32px;
+  gap: 16px;
+  display: flex;
+}
+
+/* Самостоятельный блок Логотипа */
+.logo__img {
   width: 192px;
   height: 48px;
   border-radius: 8px;
 }
 
-.search-input {
+/* Самостоятельный блок Поиска */
+.search__input {
   width: 506px;
   height: 48px;
   padding: 12px 16px;
-  gap: 16px;
   border-radius: 8px;
   background: rgba(245, 244, 244, 0.4);
-
   border: none;
   outline: none;
-
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 20px;
   line-height: 24px;
-  letter-spacing: 0px;
 }
 
-.search-input::placeholder {
+.search__input::placeholder {
   color: #707070;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-style: Regular;
   font-size: 20px;
   line-height: 24px;
-  letter-spacing: 0px;
 }
 
-.icon-close {
-  display: none;
-}
-.icon-search {
-  display: inline-block;
-}
-
-.search-input:focus ~ .search-button .icon-search {
-  display: none;
-}
-.search-input:focus ~ .search-button .icon-close {
-  display: inline-block;
-}
-
-.search-button {
+.search__button {
   position: absolute;
   right: 50px;
   top: 50%;
   transform: translateY(-50%);
-
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.weather-today {
-  width: 1120px;
-  height: 472px;
-  opacity: 1;
-  padding: 32px;
-  gap: 16px;
-  display: flex;
+/* Элементы иконки и их БЭМ-модификаторы */
+.search__icon_type_close {
+  display: none;
+}
+.search__icon_type_search {
+  display: inline-block;
 }
 
-.weather-today-info {
+/* Состояния фокуса по БЭМ */
+.search__input:focus ~ .search__button .search__icon_type_search {
+  display: none;
+}
+.search__input:focus ~ .search__button .search__icon_type_close {
+  display: inline-block;
+}
+
+/* Самостоятельный блок карточки погоды */
+.weather-info {
   width: 534px;
   height: 408px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-content: space-between; 
-  opacity: 1;
+  align-content: space-between;
   padding: 8px;
 }
 
-.weather-city {
+.weather-info__city {
   width: 518px;
   height: 32px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-style: Bold;
   font-size: 24px;
   line-height: 32px;
-  letter-spacing: 0px;
   text-align: center;
   color: #f5f4f4;
 }
 
-.weather-date {
+.weather-info__date,
+.weather-info__time,
+.weather-info__feel,
+.weather-info__cloudiness {
   width: 518px;
   height: 24px;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-style: Regular;
   font-size: 20px;
   line-height: 24px;
-  letter-spacing: 0px;
   text-align: center;
   color: #f5f4f4;
 }
 
-.weather-time {
-  width: 518px;
-  height: 24px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: center;
-  color: #f5f4f4;
-}
-
-.weather-temp {
+.weather-info__temp {
   width: 518px;
   height: 112px;
-  opacity: 1;
   gap: 8px;
 }
 
-.degrees {
+.weather-info__degrees {
   width: 518px;
   height: 112px;
-  opacity: 1;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-style: Bold;
   font-size: 112px;
   line-height: 112px;
-  letter-spacing: 0px;
   text-align: center;
   color: #f5f4f4;
 }
 
-.weather-other-info {
+.weather-info__meta {
   width: 518px;
   height: 56px;
-  opacity: 1;
   gap: 8px;
   color: #f5f4f4;
 }
 
-.weather-other-info-cloudiness {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: center;
-  width: 518px;
-  height: 24px;
-  opacity: 1;
-}
-
-.weather-other-info-feel {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: center;
-  width: 518px;
-  height: 24px;
-  opacity: 1;
-}
-
-.weather-icon {
+.weather-info__icon {
   width: 24px;
   height: 24px;
-  opacity: 1;
 }
 
-.weather-more-details {
+/* Самостоятельный блок правых деталей (Grid/Flex) */
+.weather-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-content: space-between; 
+  align-content: space-between;
 }
 
-.tablet {
+/* Элемент-карточка внутри блока деталей (бывший .tablet) */
+.weather-details__card {
   width: 158px;
   height: 196px;
   padding: 16px;
   gap: 16px;
-  opacity: 1;
   border-radius: 8px;
   background: rgba(245, 244, 244, 0.4);
 }
