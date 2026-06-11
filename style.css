@@ -1,26 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-variant-numeric: lining-nums;
 }
 
 body {
-  background-image: url("./public/a583a5e1af39a4dce995d74a93258dcd98c4d182.jpeg");
+  min-width: 1280px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-image: url("../public/a583a5e1af39a4dce995d74a93258dcd98c4d182.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-width: 1280px;
-  height: 924px;
+
+  min-height: 100vh;
+
+  box-sizing: border-box;
   opacity: 1;
   padding: 32px 80px;
   gap: 32px;
+  margin: 0;
 }
 
-/* Блок приложения */
 .weather-app {
   width: 1120px;
   height: 860px;
@@ -32,7 +41,6 @@ body {
   backdrop-filter: blur(50px);
 }
 
-/* Шапка — элемент блока weather-app */
 .weather-app__header {
   width: 1120px;
   height: 112px;
@@ -45,7 +53,6 @@ body {
   z-index: 10;
 }
 
-/* Главный экран — элемент блока weather-app */
 .weather-app__today {
   width: 1120px;
   height: 472px;
@@ -54,14 +61,12 @@ body {
   display: flex;
 }
 
-/* Самостоятельный блок Логотипа */
 .logo__img {
   width: 192px;
   height: 48px;
   border-radius: 8px;
 }
 
-/* Самостоятельный блок Поиска */
 .search__input {
   width: 506px;
   height: 48px;
@@ -70,18 +75,24 @@ body {
   background: rgba(245, 244, 244, 0.4);
   border: none;
   outline: none;
-  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
 }
 
-.search__input::placeholder {
-  color: #707070;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+.search__input:placeholder-shown:hover {
+  background: rgba(218, 218, 218, 1);
+  cursor: pointer;
+}
+
+.search__input:not(:placeholder-shown) {
+  background: rgba(245, 244, 244, 0.4);
+  cursor: text;
+}
+
+.search__input:not(:placeholder-shown):hover,
+.search__input:focus {
+  background: rgba(218, 218, 218, 1);
 }
 
 .search__button {
@@ -98,7 +109,6 @@ body {
   justify-content: center;
 }
 
-/* Элементы иконки и их БЭМ-модификаторы */
 .search__icon_type_close {
   display: none;
 }
@@ -106,7 +116,6 @@ body {
   display: inline-block;
 }
 
-/* Состояния фокуса по БЭМ */
 .search__input:focus ~ .search__button .search__icon_type_search {
   display: none;
 }
@@ -114,7 +123,6 @@ body {
   display: inline-block;
 }
 
-/* Самостоятельный блок карточки погоды */
 .weather-info {
   width: 534px;
   height: 408px;
@@ -125,10 +133,34 @@ body {
   padding: 8px;
 }
 
+.weather-info__location {
+  display: flex;
+  flex-wrap: wrap;
+  width: 518px;
+  height: 96px;
+  gap: 8px;
+  opacity: 1;
+}
+
+.weather-info__temp {
+  width: 518px;
+  height: 112px;
+  gap: 8px;
+  opacity: 1;
+}
+
+.weather-info__meta {
+  display: flex;
+  flex-wrap: wrap;
+  width: 518px;
+  height: 56px;
+  gap: 8px;
+  opacity: 1;
+}
+
 .weather-info__city {
   width: 518px;
   height: 32px;
-  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
@@ -142,12 +174,18 @@ body {
 .weather-info__cloudiness {
   width: 518px;
   height: 24px;
-  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
   color: #f5f4f4;
+}
+
+.weather-info__cloudiness {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .weather-info__temp {
@@ -159,7 +197,6 @@ body {
 .weather-info__degrees {
   width: 518px;
   height: 112px;
-  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 112px;
   line-height: 112px;
@@ -179,7 +216,6 @@ body {
   height: 24px;
 }
 
-/* Самостоятельный блок правых деталей (Grid/Flex) */
 .weather-details {
   display: flex;
   flex-wrap: wrap;
@@ -187,7 +223,6 @@ body {
   align-content: space-between;
 }
 
-/* Элемент-карточка внутри блока деталей (бывший .tablet) */
 .weather-details__card {
   width: 158px;
   height: 196px;
