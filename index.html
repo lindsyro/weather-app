@@ -24,7 +24,7 @@
             placeholder="Поиск по городу"
             aria-label="Поиск города"
           />
-          <button type="submit" class="search__button">
+          <button type="button" class="search__button">
             <img
               src="./public/icons/search.png"
               alt="Поиск"
@@ -48,7 +48,7 @@
           <div class="weather-info__location">
             <h1 class="weather-info__city">Москва</h1>
             <p class="weather-info__date">Суббота, 06 января</p>
-            <p class="weather-info__time">11:29</p>
+            <time class="weather-info__time">11:29</time>
           </div>
           <div class="weather-info__temp">
             <p class="weather-info__degrees">-7°</p>
@@ -59,20 +59,18 @@
                 src="./public/icons/weather.svg"
                 alt=""
                 class="weather-info__icon"
+                width="24"
+                height="24"
               />
               Облачно
             </p>
             <p class="weather-info__feel">Ощущается как -11°</p>
           </div>
         </section>
-        <section class="weather-details">
-          <article class="weather-details__card"></article>
-          <article class="weather-details__card"></article>
-          <article class="weather-details__card"></article>
-          <article class="weather-details__card"></article>
-          <article class="weather-details__card"></article>
-          <article class="weather-details__card"></article>
-        </section>
+        <ul class="weather-details"></ul>
+        <template data-weather-card-template>
+          <li class="weather-details__card"></li>
+        </template>
       </div>
     </main>
   </body>
