@@ -1,0 +1,15 @@
+.weather-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.weather-details__card {
+  width: 158px;
+  height: 196px;
+  padding: 16px;
+  gap: 16px;
+  border-radius: 8px;
+  background: rgba(245, 244, 244, 0.4);
+}

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App - Sprint 1</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="main.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -12,7 +12,7 @@
       <header class="weather-app__header">
         <a href="/" class="logo">
           <img
-            src="./public/desktop-tablet.svg"
+            src="./public/icons/desktop-tablet.svg"
             class="logo__img"
             alt="Логотип"
           />
@@ -26,14 +26,19 @@
           />
           <button type="submit" class="search__button">
             <img
-              src="./public/search.png"
+              src="./public/icons/search.png"
               alt="Поиск"
               class="search__icon search__icon_type_search"
             />
             <img
-              src="./public/close.svg"
+              src="./public/icons/close.svg"
               alt="Очистить"
               class="search__icon search__icon_type_close"
+            />
+            <img
+              src="./public/icons/close-hover.png"
+              alt="Очистить"
+              class="search__icon search__icon_type_close_hover"
             />
           </button>
         </form>
@@ -51,7 +56,7 @@
           <div class="weather-info__meta">
             <p class="weather-info__cloudiness">
               <img
-                src="./public/weather.svg"
+                src="./public/icons/weather.svg"
                 alt=""
                 class="weather-info__icon"
               />
@@ -61,12 +66,12 @@
           </div>
         </section>
         <section class="weather-details">
-          <div class="weather-details__card"></div>
-          <div class="weather-details__card"></div>
-          <div class="weather-details__card"></div>
-          <div class="weather-details__card"></div>
-          <div class="weather-details__card"></div>
-          <div class="weather-details__card"></div>
+          <article class="weather-details__card"></article>
+          <article class="weather-details__card"></article>
+          <article class="weather-details__card"></article>
+          <article class="weather-details__card"></article>
+          <article class="weather-details__card"></article>
+          <article class="weather-details__card"></article>
         </section>
       </div>
     </main>

@@ -1,0 +1,77 @@
+.weather-info {
+  width: 534px;
+  height: 408px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 8px;
+}
+
+.weather-info__location,
+.weather-info__meta {
+  display: flex;
+  flex-wrap: wrap;
+  width: 518px;
+  gap: 8px;
+  opacity: 1;
+  color: #f5f4f4;
+}
+
+.weather-info__location {
+  height: 96px;
+}
+.weather-info__meta {
+  height: 56px;
+}
+
+.weather-info__temp {
+  width: 518px;
+  height: 112px;
+  gap: 8px;
+}
+
+.weather-info__city {
+  width: 518px;
+  height: 32px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #f5f4f4;
+}
+
+.weather-info__date,
+.weather-info__time,
+.weather-info__feel,
+.weather-info__cloudiness {
+  width: 518px;
+  height: 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #f5f4f4;
+}
+
+.weather-info__cloudiness {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.weather-info__degrees {
+  width: 518px;
+  height: 112px;
+  font-weight: 700;
+  font-size: 112px;
+  line-height: 112px;
+  text-align: center;
+  color: #f5f4f4;
+}
+
+.weather-info__icon {
+  width: 24px;
+  height: 24px;
+}

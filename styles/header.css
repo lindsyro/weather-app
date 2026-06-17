@@ -1,0 +1,97 @@
+.weather-app__header {
+  width: 1120px;
+  height: 112px;
+  gap: 358px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.logo__img {
+  width: 192px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.search__input {
+  width: 506px;
+  height: 48px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: rgba(245, 244, 244, 0.4);
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.search__input:placeholder-shown:hover {
+  background: rgba(218, 218, 218, 1);
+  cursor: pointer;
+}
+
+.search__input:not(:placeholder-shown) {
+  background: rgba(245, 244, 244, 0.4);
+  cursor: text;
+}
+
+.search__input:not(:placeholder-shown):hover,
+.search__input:focus,
+.search__input:has(~ .search__button:hover) {
+  background: rgba(218, 218, 218, 1);
+}
+
+.search__button {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search__icon_type_close,
+.search__icon_type_close_hover {
+  display: none;
+}
+
+.search__icon_type_search {
+  display: inline-block;
+}
+
+.search__input:focus ~ .search__button .search__icon_type_search,
+.search__input:not(:placeholder-shown)
+  ~ .search__button
+  .search__icon_type_search {
+  display: none;
+}
+
+.search__input:focus ~ .search__button .search__icon_type_close,
+.search__input:not(:placeholder-shown)
+  ~ .search__button
+  .search__icon_type_close {
+  display: inline-block;
+}
+
+.search__input:focus ~ .search__button:hover .search__icon_type_close,
+.search__input:not(:placeholder-shown)
+  ~ .search__button:hover
+  .search__icon_type_close {
+  display: none;
+}
+
+.search__input:focus ~ .search__button:hover .search__icon_type_close_hover,
+.search__input:not(:placeholder-shown)
+  ~ .search__button:hover
+  .search__icon_type_close_hover {
+  display: inline-block;
+}
