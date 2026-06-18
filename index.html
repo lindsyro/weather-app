@@ -8,70 +8,72 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <main class="weather-app">
-      <header class="weather-app__header">
-        <a href="/" class="logo">
-          <img
-            src="./public/icons/desktop-tablet.svg"
-            class="logo__img"
-            alt="Логотип"
-          />
-        </a>
-        <form class="search">
-          <input
-            type="text"
-            class="search__input"
-            placeholder="Поиск по городу"
-            aria-label="Поиск города"
-          />
-          <button type="button" class="search__button">
+    <div class="page">
+      <div class="weather-app">
+        <header class="weather-app__header">
+          <a href="/" class="logo">
             <img
-              src="./public/icons/search.png"
-              alt="Поиск"
-              class="search__icon search__icon_type_search"
+              src="./public/icons/desktop-tablet.svg"
+              class="logo__img"
+              alt="Логотип"
             />
-            <img
-              src="./public/icons/close.svg"
-              alt="Очистить"
-              class="search__icon search__icon_type_close"
+          </a>
+          <form class="search">
+            <input
+              type="text"
+              class="search__input"
+              placeholder="Поиск по городу"
+              aria-label="Поиск города"
             />
-            <img
-              src="./public/icons/close-hover.png"
-              alt="Очистить"
-              class="search__icon search__icon_type_close_hover"
-            />
-          </button>
-        </form>
-      </header>
-      <div class="weather-app__today">
-        <section class="weather-info">
-          <div class="weather-info__location">
-            <h1 class="weather-info__city">Москва</h1>
-            <p class="weather-info__date">Суббота, 06 января</p>
-            <time class="weather-info__time">11:29</time>
-          </div>
-          <div class="weather-info__temp">
-            <p class="weather-info__degrees">-7°</p>
-          </div>
-          <div class="weather-info__meta">
-            <p class="weather-info__cloudiness">
+            <button type="button" class="search__button">
               <img
-                src="./public/icons/weather.svg"
-                alt=""
-                class="weather-info__icon"
-                width="24"
-                height="24"
+                src="./public/icons/search.png"
+                alt="Поиск"
+                class="search__icon search__icon_type_search"
               />
-              Облачно
-            </p>
-            <p class="weather-info__feel">Ощущается как -11°</p>
-          </div>
-        </section>
-        <ul class="weather-details"></ul>
-        <template data-weather-card-template>
-          <li class="weather-details__card"></li>
-        </template>
+              <img
+                src="./public/icons/close.svg"
+                alt="Очистить"
+                class="search__icon search__icon_type_close"
+              />
+              <img
+                src="./public/icons/close-hover.png"
+                alt="Очистить"
+                class="search__icon search__icon_type_close_hover"
+              />
+            </button>
+          </form>
+        </header>
+        <main class="weather-app__today">
+          <section class="weather-info">
+            <div class="weather-info__location">
+              <h1 class="weather-info__city">Москва</h1>
+              <p class="weather-info__date">Суббота, 06 января</p>
+              <time class="weather-info__time">11:29</time>
+            </div>
+            <div class="weather-info__temp">
+              <p class="weather-info__degrees">-7°</p>
+            </div>
+            <div class="weather-info__meta">
+              <p class="weather-info__cloudiness">
+                <img
+                  src="./public/icons/weather.svg"
+                  alt=""
+                  class="weather-info__icon"
+                  width="24"
+                  height="24"
+                />
+                Облачно
+              </p>
+              <p class="weather-info__feel">Ощущается как -11°</p>
+            </div>
+          </section>
+          <ul class="weather-details"></ul>
+          <template data-weather-card-template>
+            <li class="weather-details__card"></li>
+          </template>
+        </main>
       </div>
-    </main>
+    </div>
   </body>
 </html>
