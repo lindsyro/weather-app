@@ -14,3 +14,96 @@
   flex-direction: column;
   gap: 16px;
 }
+
+.weather-details__values {
+  width: 126px;
+  height: 116px;
+  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.weather-details__title {
+  width: 126px;
+  height: 20px;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: rgba(32, 32, 32, 1);
+}
+
+.weather-details__icon {
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+}
+
+.weather-details__value {
+  width: 110px;
+  height: 32px;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: rgba(32, 32, 32, 1);
+}
+
+.weather-details__meta {
+  width: 126px;
+  height: 32px;
+  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.weather-details__progress-bar {
+  width: 126px;
+  height: 8px;
+}
+
+.weather-details__text {
+  width: 126px;
+  height: 16px;
+  gap: 8px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.weather-details__progress-values {
+  display: flex;
+  width: 126px;
+  height: 16px;
+  gap: 8px;
+}
+
+.weather-details__initial-value {
+  width: 88px;
+  height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(57, 57, 57, 1);
+}
+
+.weather-details__final-value {
+  width: 30px;
+  height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: right;
+  color: rgba(57, 57, 57, 1);
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="main.css" />
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
   </head>
   <body>
     <div class="page">
@@ -70,7 +70,22 @@
           </section>
           <ul class="weather-details"></ul>
           <template data-weather-card-template>
-            <li class="weather-details__card"></li>
+            <li class="weather-details__card">
+              <div class="weather-details__values">
+                <h3 class="weather-details__title"></h3>
+                <img class="weather-details__icon" src="" alt="" />
+                <div class="weather-details__value"></div>
+              </div>
+
+              <div class="weather-details__meta">
+                <img class="weather-details__progress-bar" src=""></img>
+                <p class="weather-details__progress-values">
+                  <span class="weather-details__initial-value"></span>
+                  <span class="weather-details__final-value"></span>
+                </p>
+                <p class="weather-details__text"></p>
+              </div>
+            </li>
           </template>
         </main>
       </div>
