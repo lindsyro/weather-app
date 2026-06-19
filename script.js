@@ -55,7 +55,7 @@ weatherDetailsData.forEach((data) => {
       iconName = windDirectionsFiles[russianText] || data.text;
     }
 
-    icon.src = `public/icons/${folder}/${iconName}.png`.replace("//", "/");
+    icon.src = `public/icons/values/${folder}/${iconName}.png`.replace("//", "/");
     icon.alt = data.title;
   }
 
