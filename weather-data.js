@@ -1,7 +1,7 @@
 export const weatherDetailsData = [
   {
     icon: "humidity",
-    progressBar: 75,
+    progress_bar: 75,
     title: "Влажность",
     value: "75 %",
     text: "",
@@ -13,7 +13,7 @@ export const weatherDetailsData = [
   },
   {
     icon: "pressure",
-    progressBar: "high",
+    progress_bar: "high",
     title: "Давление",
     value: 761,
     text: "Повышенное",
@@ -25,7 +25,7 @@ export const weatherDetailsData = [
   },
   {
     icon: "visibility",
-    progressBar: 25,
+    progress_bar: 25,
     title: "Видимость",
     value: "28 км",
     text: "Нормальная",
@@ -37,7 +37,7 @@ export const weatherDetailsData = [
   },
   {
     icon: "sunrise",
-    progressBar: 0,
+    progress_bar: 0,
     title: "Рассвет",
     value: "8:42",
     text: "Прошло: 02:47",
@@ -49,7 +49,7 @@ export const weatherDetailsData = [
   },
   {
     icon: "sunset",
-    progressBar: 0,
+    progress_bar: 0,
     title: "Закат",
     value: "16:37",
     initial_value: "",
@@ -61,7 +61,7 @@ export const weatherDetailsData = [
   },
   {
     icon: "wind",
-    progressBar: 0,
+    progress_bar: 0,
     title: "Сила ветра",
     value: "2 м/с",
     text: "Северо-западный",

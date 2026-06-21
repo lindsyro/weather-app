@@ -1,4 +1,7 @@
 import { weatherDetailsData } from "./weather-data.js";
+import { weatherInfo, renderWeatherInfo } from "./weather-info.js";
+
+renderWeatherInfo(weatherInfo);
 
 const searchInput = document.querySelector(".search__input");
 
@@ -25,25 +28,19 @@ const windDirectionsFiles = {
 weatherDetailsData.forEach((data) => {
   const cardClone = template.content.cloneNode(true);
 
-  const title = cardClone.querySelector(".weather-details__title");
-  const value = cardClone.querySelector(".weather-details__value");
-  const text = cardClone.querySelector(".weather-details__text");
-  const icon = cardClone.querySelector(".weather-details__icon");
-  const progressBar = cardClone.querySelector(".weather-details__progress-bar");
-  const progressValues = cardClone.querySelector(
-    ".weather-details__progress-values",
-  );
-  const initialValue = cardClone.querySelector(
-    ".weather-details__initial-value",
-  );
-  const finalValue = cardClone.querySelector(".weather-details__final-value");
+  Object.keys(data).forEach((key) => {
+    const bemSuffix = key.replace(/_/g, "-");
+    const element = cardClone.querySelector(`.weather-details__${bemSuffix}`);
 
-  if (title) title.textContent = data.title;
-  if (value) value.textContent = data.value;
-  if (initialValue) initialValue.textContent = data.initial_value;
-  if (finalValue) finalValue.textContent = data.final_value;
+    if (element && data[key] !== undefined) {
+      if (key !== "icon" && key !== "progress_bar" && key !== "text") {
+        element.textContent = data[key];
+      }
+    }
+  });
 
-  if (icon) {
+  const iconEl = cardClone.querySelector(".weather-details__icon");
+  if (iconEl && data.icon) {
     const isWind = data.icon === "wind";
 
     let iconName = data.icon;
@@ -55,27 +52,39 @@ weatherDetailsData.forEach((data) => {
       iconName = windDirectionsFiles[russianText] || data.text;
     }
 
-    icon.src = `public/icons/values/${folder}/${iconName}.png`.replace("//", "/");
-    icon.alt = data.title;
+    iconEl.src = `public/icons/values/${folder}/${iconName}.png`.replace(
+      "//",
+      "/",
+    );
+    iconEl.alt = data.title;
   }
 
-  if (text) {
+  const textEl = cardClone.querySelector(".weather-details__text");
+  if (textEl) {
     if (data.hasText && data.text) {
-      text.textContent = data.text;
+      textEl.textContent = data.text;
     } else {
-      text.remove();
+      textEl.remove();
     }
   }
 
-  if (progressBar) {
-    if (data.hasProgressBar) {
-      progressBar.src = `public/icons/progress/${data.progressBar}.png`;
+  const progressBarEl = cardClone.querySelector(
+    ".weather-details__progress-bar",
+  );
+  if (progressBarEl) {
+    if (data.hasProgressBar && data.progress_bar) {
+      progressBarEl.src = `public/icons/progress/${data.progress_bar}.png`;
     } else {
-      progressBar.remove();
+      progressBarEl.remove();
     }
   }
 
-  if (!data.hasValues) progressValues.remove();
+  const progressValuesEl = cardClone.querySelector(
+    ".weather-details__progress-values",
+  );
+  if (progressValuesEl && !data.hasValues) {
+    progressValuesEl.remove();
+  }
 
   fragment.append(cardClone);
 });

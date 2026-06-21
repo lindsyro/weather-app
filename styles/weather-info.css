@@ -44,7 +44,7 @@
 .weather-info__date,
 .weather-info__time,
 .weather-info__feel,
-.weather-info__cloudiness {
+.weather-info__status {
   width: 518px;
   height: 24px;
   font-weight: 400;
@@ -54,8 +54,8 @@
   color: #f5f4f4;
 }
 
-.weather-info__cloudiness {
-  display: flex;
+.weather-info__status {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
