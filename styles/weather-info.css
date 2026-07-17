@@ -75,3 +75,28 @@
   width: 24px;
   height: 24px;
 }
+
+.weather-details__progress-bar {
+  width: 126px;
+  height: 8px;
+  position: relative;
+  background: rgba(218, 218, 218, 0.4);
+  
+  border-radius: 4px; 
+}
+
+.progress-thumb {
+  position: absolute;
+  top: 50%;
+  left: 0%; 
+  
+  transform: translate(-50%, -50%); 
+  
+  width: 8px;
+  height: 8px;
+  background-color: rgba(245, 244, 244, 1);
+
+  border-radius: 50%;
+  
+  transition: left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
