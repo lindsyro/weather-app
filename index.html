@@ -85,6 +85,32 @@
             </li>
           </template>
         </main>
+        <section class="forecast">
+          <header class="forecast__header">
+            <h2 class="forecast__title">Прогноз:</h2>
+            <nav class="forecast__tabs">
+              <ul class="forecast__tabs-list">
+                <li class="forecast__tab forecast__tab_active">на 24 часа</li>
+                <li class="forecast__tab">на 5 дней</li>
+              </ul>
+            </nav>
+          </header>
+          <div class="forecast__slider">
+            <button class="forecast__arrow forecast__arrow_type_prev" aria-label="Предыдущие" disabled></button>
+            <ul class="forecast__list"></ul>
+            <template data-forecast-card-template>
+              <li class="forecast__item">
+                <time class="forecast__time"></time>
+                <img class="forecast__icon" src="" alt="" />
+                <span class="forecast__temp"></span>
+              </li>
+            </template>
+            <button class="forecast__arrow forecast__arrow_type_next" aria-label="Следующие"></button>
+          </div>
+        </section>
+        <footer class="footer">
+          <p class="footer__text">Проект выполнен в рамках стажировки <a href="#" class="footer__link">PREAX</a></p>
+        </footer>
       </div>
     </div>
   </body>

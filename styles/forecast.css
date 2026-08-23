@@ -1,0 +1,138 @@
+.forecast {
+  width: 1120px;
+  height: 192px;
+  padding: 32px;
+}
+
+.forecast__header {
+  width: 1056px;
+  height: 32px;
+  gap: 32px;
+  display: flex;
+  align-items: baseline;
+}
+
+.forecast__title {
+  width: 105px;
+  height: 32px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #f5f4f4;
+}
+
+.forecast__tabs-list {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.forecast__tab {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #a6a6a6;
+  cursor: pointer;
+  height: 24px;
+  gap: 4px;
+}
+
+.forecast__tab:not(.forecast__tab_active):hover {
+  border-bottom: 2px solid #a6a6a6;
+}
+
+.forecast__tab_active {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #f5f4f4;
+  border-bottom: 2px solid #f5f4f4;
+}
+
+.forecast__slider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.forecast__arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.forecast__arrow:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.forecast__arrow:not(:disabled):hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Add pseudo-elements or mask for arrows if needed, let's just use mask */
+.forecast__arrow_type_prev {
+  -webkit-mask: url('../public/icons/input/arrow-left.svg') center / 24px no-repeat; /* assuming arrow icon exists or just text */
+  mask: url('../public/icons/input/arrow-left.svg') center / 24px no-repeat;
+  background-color: #fff;
+}
+
+.forecast__arrow_type_next {
+  -webkit-mask: url('../public/icons/input/arrow-right.svg') center / 24px no-repeat;
+  mask: url('../public/icons/input/arrow-right.svg') center / 24px no-repeat;
+  background-color: #fff;
+}
+
+.forecast__list {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.forecast__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 96px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.forecast__time {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.forecast__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.forecast__temp {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+}
