@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="./main.css" />
-    <script type="module" src="./scripts/script.js" defer></script>
+    <script type="module" src="./scripts/script.js"></script>
   </head>
   <body>
     <div class="page">
@@ -21,28 +21,26 @@
             />
           </a>
           <form class="search">
+            <img
+              src="public/icons/input/search.png"
+              alt=""
+              aria-hidden="true"
+              class="search__icon search__icon_type_search"
+            />
+
             <input
               type="text"
               class="search__input"
               placeholder="Поиск по городу"
               aria-label="Поиск города"
             />
-            <button type="button" class="search__button">
-              <img
-                src="public/icons/input/search.png"
-                alt="Поиск"
-                class="search__icon search__icon_type_search"
-              />
-              <img
-                src="public/icons/input/close.svg"
-                alt="Очистить"
-                class="search__icon search__icon_type_close"
-              />
-              <img
-                src="public/icons/input/close-hover.png"
-                alt="Очистить"
-                class="search__icon search__icon_type_close_hover"
-              />
+
+            <button
+              type="reset"
+              class="search__button"
+              aria-label="Очистить поле поиска"
+            >
+              <div class="search__icon search__icon_type_close"></div>
             </button>
           </form>
         </header>
