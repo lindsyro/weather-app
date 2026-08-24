@@ -1,7 +1,10 @@
 .forecast {
+  display: flex;
+  flex-wrap: wrap;
   width: 1120px;
   height: 192px;
   padding: 32px;
+  gap: 32px;
 }
 
 .forecast__header {
@@ -58,42 +61,55 @@
 .forecast__slider {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 32px;
+  width: 1056px;
+  height: 64px;
 }
 
 .forecast__arrow {
-  width: 48px;
+  width: 56px;
   height: 48px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  cursor: pointer;
+  background: rgba(245, 244, 244, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s;
+  cursor: pointer;
+  gap: 10px;
+
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
 }
 
-.forecast__arrow:disabled {
+.forecast__arrow_type_prev::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-color: rgba(84, 84, 84, 1);
+  -webkit-mask: url('../public/icons/control/vector.svg') center / contain no-repeat;
+  mask: url('../public/icons/control/vector.svg') center / contain no-repeat;
+}
+
+.forecast__arrow[disabled] {
+  background-color: rgba(245, 244, 244, 0.4);
   opacity: 0.5;
   cursor: default;
 }
 
-.forecast__arrow:not(:disabled):hover {
-  background: rgba(255, 255, 255, 0.2);
+.forecast__arrow:not([disabled]):hover {
+  background-color: rgba(218, 218, 218, 1);
 }
 
-/* Add pseudo-elements or mask for arrows if needed, let's just use mask */
-.forecast__arrow_type_prev {
-  -webkit-mask: url('../public/icons/input/arrow-left.svg') center / 24px no-repeat; /* assuming arrow icon exists or just text */
-  mask: url('../public/icons/input/arrow-left.svg') center / 24px no-repeat;
-  background-color: #fff;
-}
-
-.forecast__arrow_type_next {
-  -webkit-mask: url('../public/icons/input/arrow-right.svg') center / 24px no-repeat;
-  mask: url('../public/icons/input/arrow-right.svg') center / 24px no-repeat;
-  background-color: #fff;
+.forecast__arrow_type_next::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-color: rgba(84, 84, 84, 1);
+  -webkit-mask: url('../public/icons/control/vector.svg') center / contain no-repeat;
+  mask: url('../public/icons/control/vector.svg') center / contain no-repeat;
+  transform: rotate(-180deg);
 }
 
 .forecast__list {
@@ -103,36 +119,27 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, black 95%, transparent 100%);
+  mask-image: linear-gradient(to right, black 95%, transparent 100%);
 }
 
 .forecast__item {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  width: 96px;
-  height: 120px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(245, 244, 244, 0.4);
+  height: 64px;
   border-radius: 8px;
+  gap: 16px;
   padding: 16px;
-}
-
-.forecast__time {
+  color: #202020;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
 }
 
 .forecast__icon {
   width: 32px;
   height: 32px;
-}
-
-.forecast__temp {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  color: #fff;
 }
