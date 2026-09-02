@@ -26,13 +26,16 @@
               alt=""
               aria-hidden="true"
               class="search__icon search__icon_type_search"
+              width="24"
+              height="24"
             />
 
+            <label for="search-city" class="visually-hidden">Поиск города</label>
             <input
+              id="search-city"
               type="text"
               class="search__input"
               placeholder="Поиск по городу"
-              aria-label="Поиск города"
             />
 
             <button
@@ -47,16 +50,16 @@
         <main class="weather-app__today">
           <section class="weather-info">
             <div class="weather-info__location">
-              <h2 class="weather-info__city"></h2>
-              <p class="weather-info__date"></p>
-              <time class="weather-info__time"></time>
+              <h2 class="weather-info__city">Москва</h2>
+              <time datetime="2026-01-01" class="weather-info__date"></time>
+              <time datetime="00:00" class="weather-info__time"></time>
             </div>
             <div class="weather-info__temp">
               <p class="weather-info__degrees"></p>
             </div>
             <div class="weather-info__meta">
               <p class="weather-info__status">
-                <img class="weather-info__icon" src="" width="24" height="24" />
+                <img class="weather-info__icon" src="public/icons/weather/01d.svg" alt="" width="24" height="24" />
                 <span class="weather-info__weather"></span>
               </p>
               <p class="weather-info__feel"></p>
@@ -66,8 +69,8 @@
           <template data-weather-card-template>
             <li class="weather-details__card">
               <div class="weather-details__values">
-                <h3 class="weather-details__title"></h3>
-                <img class="weather-details__icon" src="" alt="" />
+                <h3 class="weather-details__title">Параметр</h3>
+                <img class="weather-details__icon" src="public/icons/values/humidity.png" alt="" width="32" height="32" />
                 <div class="weather-details__value"></div>
               </div>
 
@@ -90,22 +93,22 @@
             <h2 class="forecast__title">Прогноз:</h2>
             <nav class="forecast__tabs">
               <ul class="forecast__tabs-list">
-                <li class="forecast__tab forecast__tab_active">на 24 часа</li>
-                <li class="forecast__tab">на 5 дней</li>
+                <li><button class="forecast__tab forecast__tab_active" type="button">на 24 часа</button></li>
+                <li><button class="forecast__tab" type="button">на 5 дней</button></li>
               </ul>
             </nav>
           </header>
           <div class="forecast__slider">
-            <div class="forecast__arrow forecast__arrow_type_prev" aria-label="Предыдущие" disabled></div>
+            <button class="forecast__arrow forecast__arrow_type_prev" aria-label="Предыдущие" type="button" disabled></button>
             <ul class="forecast__list"></ul>
             <template data-forecast-card-template>
               <li class="forecast__item">
-                <time class="forecast__time"></time>
-                <img class="forecast__icon" src="" alt="" />
+                <time class="forecast__time" datetime="12:00"></time>
+                <img class="forecast__icon" src="public/icons/weather/01d.svg" alt="" width="32" height="32" />
                 <span class="forecast__temp"></span>
               </li>
             </template>
-            <div class="forecast__arrow forecast__arrow_type_next" aria-label="Следующие"></div>
+            <button class="forecast__arrow forecast__arrow_type_next" aria-label="Следующие" type="button"></button>
           </div>
         </section>
         <footer class="footer">

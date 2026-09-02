@@ -98,7 +98,7 @@
 .progress-thumb {
   position: absolute;
   top: 50%;
-  left: 0%; 
+  left: var(--progress, 0%);
   transform: translate(-50%, -50%); 
   width: 8px;
   height: 8px;

@@ -1,6 +1,6 @@
 .weather-app {
   width: 1120px;
-  height: 860px;
+  min-height: 860px;
   border-radius: 8px;
   margin: 0 auto;
   display: flex;
@@ -11,7 +11,7 @@
 
 .weather-app__today {
   width: 1120px;
-  height: 472px;
+  min-height: 472px;
   padding: 32px;
   gap: 16px;
   display: flex;
