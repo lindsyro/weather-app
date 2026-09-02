@@ -12,13 +12,7 @@
       <div class="weather-app">
         <header class="weather-app__header">
           <a href="/" class="logo">
-            <img
-              src="public/logo.svg"
-              class="logo__img"
-              alt="Логотип"
-              width="192"
-              height="48"
-            />
+            <img src="public/logo.svg" class="logo__img" alt="Логотип" width="192" height="48" />
           </a>
           <form class="search">
             <img
@@ -38,11 +32,7 @@
               placeholder="Поиск по городу"
             />
 
-            <button
-              type="reset"
-              class="search__button"
-              aria-label="Очистить поле поиска"
-            >
+            <button type="reset" class="search__button" aria-label="Очистить поле поиска">
               <div class="search__icon search__icon_type_close"></div>
             </button>
           </form>
@@ -59,7 +49,13 @@
             </div>
             <div class="weather-info__meta">
               <p class="weather-info__status">
-                <img class="weather-info__icon" src="public/icons/weather/01d.svg" alt="" width="24" height="24" />
+                <img
+                  class="weather-info__icon"
+                  src="public/icons/weather/01d.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
                 <span class="weather-info__weather"></span>
               </p>
               <p class="weather-info__feel"></p>
@@ -70,7 +66,13 @@
             <li class="weather-details__card">
               <div class="weather-details__values">
                 <h3 class="weather-details__title">Параметр</h3>
-                <img class="weather-details__icon" src="public/icons/values/humidity.png" alt="" width="32" height="32" />
+                <img
+                  class="weather-details__icon"
+                  src="public/icons/values/humidity.png"
+                  alt=""
+                  width="32"
+                  height="32"
+                />
                 <div class="weather-details__value"></div>
               </div>
 
@@ -93,26 +95,47 @@
             <h2 class="forecast__title">Прогноз:</h2>
             <nav class="forecast__tabs">
               <ul class="forecast__tabs-list">
-                <li><button class="forecast__tab forecast__tab_active" type="button">на 24 часа</button></li>
+                <li>
+                  <button class="forecast__tab forecast__tab_active" type="button">
+                    на 24 часа
+                  </button>
+                </li>
                 <li><button class="forecast__tab" type="button">на 5 дней</button></li>
               </ul>
             </nav>
           </header>
           <div class="forecast__slider">
-            <button class="forecast__arrow forecast__arrow_type_prev" aria-label="Предыдущие" type="button" disabled></button>
+            <button
+              class="forecast__arrow forecast__arrow_type_prev"
+              aria-label="Предыдущие"
+              type="button"
+              disabled
+            ></button>
             <ul class="forecast__list"></ul>
             <template data-forecast-card-template>
               <li class="forecast__item">
                 <time class="forecast__time" datetime="12:00"></time>
-                <img class="forecast__icon" src="public/icons/weather/01d.svg" alt="" width="32" height="32" />
+                <img
+                  class="forecast__icon"
+                  src="public/icons/weather/01d.svg"
+                  alt=""
+                  width="32"
+                  height="32"
+                />
                 <span class="forecast__temp"></span>
               </li>
             </template>
-            <button class="forecast__arrow forecast__arrow_type_next" aria-label="Следующие" type="button"></button>
+            <button
+              class="forecast__arrow forecast__arrow_type_next"
+              aria-label="Следующие"
+              type="button"
+            ></button>
           </div>
         </section>
         <footer class="footer">
-          <p class="footer__text">Проект выполнен в рамках стажировки <a href="#" class="footer__link">PREAX</a></p>
+          <p class="footer__text">
+            Проект выполнен в рамках стажировки <a href="#" class="footer__link">PREAX</a>
+          </p>
         </footer>
       </div>
     </div>

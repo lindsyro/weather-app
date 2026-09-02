@@ -63,8 +63,8 @@
   width: 24px;
   height: 24px;
   background-color: #545454;
-  -webkit-mask: url("../public/icons/input/close.svg") center / contain no-repeat;
-  mask: url("../public/icons/input/close.svg") center / contain no-repeat;
+  -webkit-mask: url('../public/icons/input/close.svg') center / contain no-repeat;
+  mask: url('../public/icons/input/close.svg') center / contain no-repeat;
   transition: background-color 0.2s;
 }
 

@@ -1,8 +1,8 @@
-@import url("./styles/fonts.css");
-@import url("./styles/global.css");
-@import url("./styles/weather-app.css");
-@import url("./styles/header.css");
-@import url("./styles/weather-info.css");
-@import url("./styles/weather-details.css");
-@import url("./styles/forecast.css");
-@import url("./styles/footer.css");
+@import url('./styles/fonts.css');
+@import url('./styles/global.css');
+@import url('./styles/weather-app.css');
+@import url('./styles/header.css');
+@import url('./styles/weather-info.css');
+@import url('./styles/weather-details.css');
+@import url('./styles/forecast.css');
+@import url('./styles/footer.css');

@@ -47,7 +47,7 @@ export const weatherDetailsData = [
     initial_value: null,
     final_value: null,
   },
-]
+];
 
 export const forecast24h = [
   { time: '12:00', icon: '04d', temp: '-7°' },
@@ -56,11 +56,11 @@ export const forecast24h = [
   { time: '21:00', icon: '04n', temp: '-9°' },
   { time: '00:00', icon: '04n', temp: '-11°' },
   { time: '03:00', icon: '04n', temp: '-13°' },
-]
+];
 
 export const forecast5d = [
   { time: 'Вс, 07 янв.', icon: '02d', temp: 'от -17° до -11°' },
   { time: 'Пн, 08 янв.', icon: '02d', temp: 'от -16° до -8°' },
   { time: 'Вт, 09 янв.', icon: '04d', temp: 'от -8° до -2°' },
   { time: 'Ср, 10 янв.', icon: '04d', temp: 'от -9° до -14°' },
-]
+];
