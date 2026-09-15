@@ -10,32 +10,34 @@
   <body>
     <div class="page">
       <div class="weather-app">
-        <header class="weather-app__header">
-          <a href="/" class="logo">
-            <img src="public/logo.svg" class="logo__img" alt="Логотип" width="192" height="48" />
-          </a>
-          <form class="search">
-            <img
-              src="public/icons/input/search.png"
-              alt=""
-              aria-hidden="true"
-              class="search__icon search__icon_type_search"
-              width="24"
-              height="24"
-            />
+    <header class="weather-app__header">
+      <a href="/" class="logo">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="public/logo.svg" />
+          <img src="public/logo-mobile.svg" class="logo__img" alt="Логотип WA" />
+        </picture>
+      </a>
+      <form class="search">
+        <label for="search-city" class="visually-hidden">Поиск города</label>
+        <input
+          id="search-city"
+          type="text"
+          class="search__input"
+          placeholder="Поиск по городу"
+        />
 
-            <label for="search-city" class="visually-hidden">Поиск города</label>
-            <input
-              id="search-city"
-              type="text"
-              class="search__input"
-              placeholder="Поиск по городу"
-            />
-
-            <button type="reset" class="search__button" aria-label="Очистить поле поиска">
-              <div class="search__icon search__icon_type_close"></div>
-            </button>
-          </form>
+        <button type="reset" class="search__button" aria-label="Очистить поле поиска">
+          <div class="search__icon search__icon_type_close"></div>
+        </button>
+        <img
+          src="public/icons/input/search.png"
+          alt=""
+          aria-hidden="true"
+          class="search__icon search__icon_type_search"
+          width="16"
+          height="16"
+        />
+      </form>
         </header>
         <main class="weather-app__today">
           <section class="weather-info">

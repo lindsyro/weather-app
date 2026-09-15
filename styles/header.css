@@ -1,8 +1,7 @@
 .weather-app__header {
-  width: 1120px;
-  height: 112px;
-  gap: 358px;
-  padding: 32px;
+  width: 100%;
+  height: 64px;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,82 +10,127 @@
 }
 
 .logo__img {
-  width: 192px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   border-radius: 8px;
 }
 
-.search__input {
-  width: 506px;
-  height: 48px;
-  padding: 12px 16px;
+/* --- СТРОКА ПОИСКА (Адаптивный Flex-контейнер) --- */
+.search {
+  width: 263px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
   border-radius: 8px;
   background: rgba(245, 244, 244, 0.4);
+  box-sizing: border-box;
+  transition: background-color 0.2s;
+}
+
+.search:hover,
+.search:focus-within {
+  background: rgba(218, 218, 218, 1);
+}
+
+/* Само поле ввода */
+.search__input {
+  flex-grow: 1;
+  min-width: 0;
+  background: transparent;
   border: none;
   outline: none;
+  padding: 0;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
-.search__input:placeholder-shown:hover {
-  background: rgba(218, 218, 218, 1);
-}
-
-.search__input:not(:placeholder-shown) {
-  background: rgba(245, 244, 244, 0.4);
-  cursor: text;
-}
-
-.search__input:not(:placeholder-shown):hover,
-.search__input:focus,
-.search__input:has(~ .search__button:hover) {
-  background: rgba(218, 218, 218, 1);
-}
-
+/* Кнопка сброса (Крестик) */
 .search__button {
-  position: absolute;
-  right: 50px;
-  top: 50%;
-  transform: translateY(-50%);
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  display: flex;
+  display: none; /* Скрыта по умолчанию */
   align-items: center;
   justify-content: center;
+  width: 16px;
+  height: 16px;
 }
 
 .search__icon_type_close {
-  display: none;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   background-color: #545454;
   -webkit-mask: url('../public/icons/input/close.svg') center / contain no-repeat;
   mask: url('../public/icons/input/close.svg') center / contain no-repeat;
   transition: background-color 0.2s;
 }
 
+.search__button:hover .search__icon_type_close {
+  background-color: #202020;
+}
+
+/* Лупа */
 .search__icon_type_search {
-  display: inline-block;
-  position: absolute;
-  right: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 24px;
-  height: 24px;
+  display: block; /* Показывается по умолчанию */
+  width: 16px;
+  height: 16px;
   pointer-events: none;
 }
 
-.search:has(.search__input:not(:placeholder-shown)) .search__icon_type_search {
+/* Логика скрытия/показа иконок */
+.search:has(.search__input:not(:placeholder-shown)) .search__icon_type_search,
+.search:has(.search__input:focus) .search__icon_type_search {
   display: none;
 }
 
-.search__input:not(:placeholder-shown) ~ .search__button .search__icon_type_close {
-  display: inline-block;
+.search:has(.search__input:not(:placeholder-shown)) .search__button,
+.search:has(.search__input:focus) .search__button {
+  display: flex;
 }
 
-.search__input:not(:placeholder-shown) ~ .search__button:hover .search__icon_type_close {
-  background-color: #202020;
+/* =========================================
+   DESKTOP STYLES (Оригинальные размеры)
+========================================= */
+@media (min-width: 1280px) {
+  .weather-app__header {
+    width: 1120px;
+    height: 112px;
+    padding: 32px;
+  }
+
+  .logo__img {
+    width: 192px;
+    height: 48px;
+  }
+
+  .search {
+    width: 506px;
+    height: 48px;
+    padding: 12px 16px;
+    gap: 16px;
+  }
+
+  .search__input {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .search__button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .search__icon_type_close {
+    width: 24px;
+    height: 24px;
+  }
+
+  .search__icon_type_search {
+    width: 24px;
+    height: 24px;
+  }
 }
