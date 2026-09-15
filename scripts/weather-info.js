@@ -1,11 +1,11 @@
 import { CONFIG } from '../config.js';
 
 export const weatherInfo = {
-  city: 'Москва',
+  city: 'Кременчуг-константиновское',
   date: 'Суббота, 06 января',
   time: '11:29',
   degrees: '-7°',
-  weather: 'Облачно',
+  weather: 'Облачно с прояснениями',
   feel: 'Ощущается как -11°',
 };
 

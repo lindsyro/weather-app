@@ -1,6 +1,6 @@
-/* --- БАЗОВЫЕ (МОБИЛЬНЫЕ) СТИЛИ --- */
 .footer {
-  width: 343px;
+  width: 100%;
+  max-width: 608px;
   height: 48px;
   padding: 16px;
   text-align: center;
@@ -27,6 +27,12 @@
 
 .footer__link:hover {
   color: #fff;
+}
+
+@media (min-width: 640px) {
+  .footer {
+    width: 608px;
+  }
 }
 
 /* =========================================

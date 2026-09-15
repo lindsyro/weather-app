@@ -1,6 +1,6 @@
-/* --- БАЗОВЫЕ (МОБИЛЬНЫЕ) СТИЛИ --- */
 .weather-info {
-  width: 311px;
+  width: 100%;
+  max-width: 608px;
   height: 184px;
   gap: 16px;
   padding-right: 8px;
@@ -15,19 +15,19 @@
 .weather-info__meta {
   display: flex;
   flex-wrap: wrap;
-  width: 295px;
+  width: 100%;
   gap: 4px;
   opacity: 1;
   color: #f5f4f4;
 }
 
 .weather-info__temp {
-  width: 295px;
+  width: 100%;
   gap: 4px;
 }
 
 .weather-info__city {
-  width: 295px;
+  width: 100%;
   height: 20px;
   font-weight: 700;
   font-size: 16px;
@@ -40,7 +40,7 @@
 .weather-info__time,
 .weather-info__feel,
 .weather-info__status {
-  width: 295px;
+  width: 100%;
   height: 16px;
   font-weight: 400;
   font-size: 14px;
@@ -57,7 +57,7 @@
 }
 
 .weather-info__degrees {
-  width: 295px;
+  width: 100%;
   height: 56px;
   font-weight: 700;
   font-size: 56px;
