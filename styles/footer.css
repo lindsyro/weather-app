@@ -31,7 +31,19 @@
 
 @media (min-width: 640px) {
   .footer {
-    width: 608px;
+    max-width: 608px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    max-width: 720px;
+    height: 68px;
+    padding: 24px;
+  }
+  .footer__text {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 

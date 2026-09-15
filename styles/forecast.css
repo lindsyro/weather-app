@@ -162,7 +162,7 @@
 
 @media (min-width: 640px) {
   .forecast {
-    width: 608px;
+    max-width: 608px;
     height: 116px;
     padding: 16px;
     gap: 16px;
@@ -185,6 +185,77 @@
     flex-direction: row;
     padding: 12px;
     gap: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .forecast {
+    max-width: 720px;
+    height: 240px;
+    padding: 24px;
+    gap: 24px;
+  }
+  .forecast__header {
+    height: 32px;
+    gap: 24px;
+  }
+  .forecast__title {
+    width: 105px;
+    height: 32px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .forecast__tabs-list {
+    gap: 32px;
+  }
+  .forecast__tab {
+    font-size: 16px;
+    line-height: 20px;
+    width: auto;
+    height: auto;
+  }
+  .forecast__tab:not(.forecast__tab_active):hover {
+    border-bottom: 2px solid #a6a6a6;
+  }
+  .forecast__tab_active {
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 2px solid #f5f4f4;
+    width: auto;
+    height: auto;
+  }
+  .forecast__slider {
+    height: 136px;
+    gap: 24px;
+  }
+  .forecast__arrow {
+    width: 56px;
+    height: 48px;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .forecast__arrow_type_prev::before,
+  .forecast__arrow_type_next::before {
+    width: 24px;
+    height: 24px;
+  }
+  .forecast__list {
+    width: 512px;
+    height: 136px;
+    gap: 12px;
+  }
+  .forecast__item {
+    width: 73px;
+    height: 136px;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .forecast__icon {
+    width: 32px;
+    height: 32px;
   }
 }
 

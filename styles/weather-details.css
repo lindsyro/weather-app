@@ -136,6 +136,75 @@
 }
 
 
+@media (min-width: 768px) {
+  .weather-details {
+    max-width: 672px;
+    height: 404px;
+    gap: 12px;
+    grid-template-columns: repeat(3, 163px);
+    justify-content: center;
+  }
+  .weather-details__card {
+    width: 163px;
+    height: 196px;
+    padding: 16px;
+    gap: 16px;
+  }
+  .weather-details__values {
+    width: 131px;
+    height: 116px;
+    gap: 16px;
+  }
+  .weather-details__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .weather-details__icon {
+    width: 32px;
+    height: 32px;
+  }
+  .weather-details__value {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .weather-details__meta {
+    width: 131px;
+    height: 32px;
+    gap: 8px;
+  }
+  .weather-details__progress-bar {
+    width: 131px;
+    height: 8px;
+  }
+  .weather-details__progress-bar::before {
+    -webkit-mask-image: radial-gradient(
+      circle at var(--progress, 0%) 50%,
+      transparent 6px,
+      black 6px
+    );
+    mask-image: radial-gradient(circle at var(--progress, 0%) 50%, transparent 6px, black 6px);
+  }
+  .progress-thumb {
+    width: 8px;
+    height: 8px;
+  }
+  .weather-details__text,
+  .weather-details__initial-value,
+  .weather-details__final-value {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .weather-details__text {
+    text-align: center;
+  }
+  .weather-details__initial-value {
+    text-align: left;
+  }
+  .weather-details__final-value {
+    text-align: right;
+  }
+}
+
 /* =========================================
    DESKTOP STYLES (Оригинальные размеры)
 ========================================= */

@@ -27,6 +27,13 @@ body {
   gap: 16px;
 }
 
+@media (min-width: 768px) {
+  .page {
+    padding: 24px;
+    gap: 32px;
+  }
+}
+
 @media (min-width: 1280px) {
   .page {
     min-width: 1280px;

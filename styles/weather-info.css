@@ -106,6 +106,44 @@
   transition: left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+@media (min-width: 768px) {
+  .weather-info {
+    max-width: 672px;
+    height: 306px;
+    gap: 24px;
+  }
+  .weather-info__location {
+    height: 92px;
+    gap: 6px;
+  }
+  .weather-info__meta {
+    height: 54px;
+    gap: 6px;
+  }
+  .weather-info__city {
+    height: 32px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .weather-info__date,
+  .weather-info__time,
+  .weather-info__feel,
+  .weather-info__status {
+    height: 24px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .weather-info__degrees {
+    height: 112px;
+    font-size: 112px;
+    line-height: 112px;
+  }
+  .weather-info__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 /* =========================================
    DESKTOP STYLES (Оригинальные размеры)
 ========================================= */
