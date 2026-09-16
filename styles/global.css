@@ -12,6 +12,7 @@ body {
 
 .page {
   width: 100%;
+  min-width: 375px;
   min-height: 100dvh;
   display: flex;
   justify-content: center;
@@ -60,4 +61,10 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media (max-width: 374.98px) {
+  .page {
+    background-attachment: scroll;
+  }
 }
