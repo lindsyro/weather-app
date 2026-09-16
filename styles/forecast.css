@@ -213,6 +213,7 @@
     line-height: 20px;
     width: auto;
     height: auto;
+    padding-bottom: 2px;
   }
   .forecast__tab:not(.forecast__tab_active):hover {
     border-bottom: 2px solid #a6a6a6;
@@ -223,6 +224,7 @@
     border-bottom: 2px solid #f5f4f4;
     width: auto;
     height: auto;
+    padding-bottom: 2px;
   }
   .forecast__slider {
     height: 136px;
@@ -259,11 +261,52 @@
   }
 }
 
+@media (min-width: 886px) {
+  .forecast {
+    max-width: 838px;
+    height: 168px;
+  }
+  .forecast__slider {
+    height: 64px;
+  }
+  .forecast__list {
+    width: 630px;
+    height: 64px;
+  }
+  .forecast__item {
+    width: 156px;
+    height: 64px;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .forecast {
+    max-width: none;
+    width: 960px;
+    height: 192px;
+    padding: 32px;
+    gap: 32px;
+  }
+  .forecast__header {
+    gap: 32px;
+  }
+  .forecast__slider {
+    height: 64px;
+    gap: 32px;
+  }
+  .forecast__list {
+    width: 720px;
+    gap: 16px;
+  }
+}
+
 /* =========================================
    DESKTOP STYLES (Оригинальные размеры)
 ========================================= */
 @media (min-width: 1280px) {
   .forecast {
+    max-width: none;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row; /* Восстанавливаем оригинальное поведение */

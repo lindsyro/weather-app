@@ -35,12 +35,34 @@
   }
 }
 
+@media (min-width: 886px) {
+  .weather-app__today {
+    max-width: 838px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .weather-app {
+    max-width: 960px;
+    min-height: 860px;
+  }
+  .weather-app__today {
+    max-width: none;
+    width: 960px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 16px;
+  }
+}
+
 @media (min-width: 1280px) {
   .weather-app {
     max-width: 1120px;
     min-height: 860px;
   }
   .weather-app__today {
+    max-width: none;
     width: 1120px;
     height: auto;
     min-height: 472px;

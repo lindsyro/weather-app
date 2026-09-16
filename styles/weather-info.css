@@ -144,11 +144,43 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .weather-info {
+    max-width: none;
+    width: 374px;
+    height: 408px;
+    padding: 8px;
+    justify-content: space-between;
+  }
+  .weather-info__location {
+    height: 128px;
+    gap: 8px;
+  }
+  .weather-info__city {
+    height: 64px;
+  }
+  .weather-info__date {
+    height: 24px;
+  }
+  .weather-info__time {
+    height: 24px;
+  }
+  .weather-info__meta {
+    height: 56px;
+    gap: 8px;
+  }
+  .weather-info__status {
+    height: 24px;
+    gap: 8px;
+  }
+}
+
 /* =========================================
    DESKTOP STYLES (Оригинальные размеры)
 ========================================= */
 @media (min-width: 1280px) {
   .weather-info {
+    max-width: none;
     width: 534px;
     height: 408px;
     padding: 8px;
@@ -163,6 +195,7 @@
   .weather-info__location {
     height: 96px;
   }
+
   .weather-info__meta {
     height: 56px;
   }

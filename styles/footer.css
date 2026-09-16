@@ -47,11 +47,27 @@
   }
 }
 
+@media (min-width: 886px) {
+  .footer {
+    max-width: 838px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    max-width: none;
+    width: 960px;
+    height: 84px;
+    padding: 32px;
+  }
+}
+
 /* =========================================
    DESKTOP STYLES (Оригинальные размеры)
 ========================================= */
 @media (min-width: 1280px) {
   .footer {
+    max-width: none;
     width: 1120px;
     height: 84px;
     padding: 32px;

@@ -142,11 +142,38 @@
   }
 }
 
+@media (min-width: 886px) {
+  .weather-app__header {
+    max-width: 838px;
+  }
+  .search {
+    max-width: 601px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .weather-app__header {
+    max-width: none;
+    width: 960px;
+    height: 112px;
+    padding: 32px;
+  }
+  .logo__img {
+    width: 192px;
+    height: 48px;
+  }
+  .search {
+    max-width: none;
+    width: 506px;
+  }
+}
+
 /* =========================================
    DESKTOP STYLES (Оригинальные размеры)
 ========================================= */
 @media (min-width: 1280px) {
   .weather-app__header {
+    max-width: none;
     width: 1120px;
     height: 112px;
     padding: 32px;

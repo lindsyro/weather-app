@@ -205,13 +205,33 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .weather-details {
+    max-width: none;
+    width: 506px;
+    height: 408px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    justify-content: start;
+    gap: 16px;
+  }
+  .weather-details__card {
+    width: 158px;
+    height: 196px;
+  }
+}
+
 /* =========================================
    DESKTOP STYLES (Оригинальные размеры)
 ========================================= */
 @media (min-width: 1280px) {
   .weather-details {
+    max-width: none;
+    width: 506px;
+    height: 408px;
     display: grid;
     grid-template-columns: repeat(3, 2fr);
+    justify-content: start;
     gap: 16px;
   }
 
