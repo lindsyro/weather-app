@@ -23,7 +23,7 @@ body {
   background-repeat: no-repeat;
   box-sizing: border-box;
   opacity: 1;
-  padding: 16px; /* Mobile padding */
+  padding: 16px;
   gap: 16px;
 }
 

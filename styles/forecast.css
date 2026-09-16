@@ -301,15 +301,12 @@
   }
 }
 
-/* =========================================
-   DESKTOP STYLES (Оригинальные размеры)
-========================================= */
 @media (min-width: 1280px) {
   .forecast {
     max-width: none;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row; /* Восстанавливаем оригинальное поведение */
+    flex-direction: row;
     width: 1120px;
     height: 192px;
     padding: 32px;
