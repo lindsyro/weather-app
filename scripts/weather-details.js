@@ -35,8 +35,8 @@ export function renderWeatherDetails(weatherDetailsData) {
       let extension = '.png';
 
       if (isWind) {
-        const russianText = data.text ? data.text.toLowerCase() : '';
-        const angle = CONFIG.windDirections[russianText] || 0;
+        const directionKey = data.direction || '';
+        const angle = CONFIG.windDirections[directionKey] || 0;
         iconName = 'direction';
         extension = '.svg';
         iconEl.style.transform = `rotate(${angle}deg)`;

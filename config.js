@@ -1,7 +1,6 @@
 export const CONFIG = {
   paths: {
     baseIcons: 'public/icons/values',
-    progressIcons: 'public/icons/progress',
   },
 
   selectors: {
@@ -20,27 +19,26 @@ export const CONFIG = {
   },
 
   windDirections: {
-    северный: -45,
-    'северо-восточный': 0,
-    восточный: 45,
-    'юго-восточный': 90,
-    южный: 135,
-    'юго-западный': 180,
-    западный: 225,
-    'северо-западный': 270,
+    north: -45,
+    'north-east': 0,
+    east: 45,
+    'south-east': 90,
+    south: 135,
+    'south-west': 180,
+    west: 225,
+    'north-west': 270,
   },
 
   weatherIcons: {
-    ясно: '01d',
-    солнечно: '01d',
-    'облачно с прояснениями': '02d',
-    'переменная облачность': '03d',
-    облачно: '04d',
-    пасмурно: '04d',
-    ливень: '09d',
-    дождь: '10d',
-    гроза: '11d',
-    снег: '13d',
-    туман: '50d',
+    clear: '01d',
+    sunny: '01d',
+    'partly-cloudy': '02d',
+    cloudy: '04d',
+    overcast: '04d',
+    shower: '09d',
+    rain: '10d',
+    thunderstorm: '11d',
+    snow: '13d',
+    fog: '50d',
   },
 };

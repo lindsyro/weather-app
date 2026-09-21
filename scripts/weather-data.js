@@ -44,6 +44,7 @@ export const weatherDetailsData = [
     title: 'Сила ветра',
     value: '2 м/с',
     text: 'Северо-западный',
+    direction: 'north-west',
     initial_value: null,
     final_value: null,
   },
