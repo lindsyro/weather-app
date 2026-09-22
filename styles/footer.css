@@ -12,7 +12,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(245, 244, 244, 1);
   margin: 0;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@
 }
 
 .footer__link {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(245, 244, 244, 1);
   text-decoration: underline;
   margin-left: 4px;
 }

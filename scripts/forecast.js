@@ -5,6 +5,31 @@ export function initForecast(forecast24h, forecast5d) {
 
   if (!forecastList || !forecastTemplate) return;
 
+  const prevArrow = document.querySelector('.forecast__arrow_type_prev');
+  const nextArrow = document.querySelector('.forecast__arrow_type_next');
+
+  function updateArrowsState() {
+    if (!prevArrow || !nextArrow) return;
+
+    const wrapper = forecastList.parentElement;
+
+    if (forecastList.scrollLeft <= 0) {
+      prevArrow.disabled = true;
+      if (wrapper) wrapper.classList.remove('forecast__list-wrapper_mask_left');
+    } else {
+      prevArrow.disabled = false;
+      if (wrapper) wrapper.classList.add('forecast__list-wrapper_mask_left');
+    }
+
+    if (Math.ceil(forecastList.scrollLeft + forecastList.clientWidth) >= forecastList.scrollWidth) {
+      nextArrow.disabled = true;
+      if (wrapper) wrapper.classList.remove('forecast__list-wrapper_mask_right');
+    } else {
+      nextArrow.disabled = false;
+      if (wrapper) wrapper.classList.add('forecast__list-wrapper_mask_right');
+    }
+  }
+
   function renderForecast(data) {
     forecastList.innerHTML = '';
     const forecastFragment = document.createDocumentFragment();
@@ -27,23 +52,28 @@ export function initForecast(forecast24h, forecast5d) {
     });
 
     forecastList.append(forecastFragment);
+    forecastList.scrollLeft = 0;
+
+    setTimeout(updateArrowsState, 0);
   }
 
-  forecastTabs.forEach((tab, index) => {
+  forecastTabs.forEach((tab) => {
     tab.addEventListener('click', (e) => {
       e.preventDefault();
 
       forecastTabs.forEach((t) => t.classList.remove('forecast__tab_active'));
       tab.classList.add('forecast__tab_active');
 
-      if (index === 0) {
+      if (tab.dataset.forecast === '24h') {
         renderForecast(forecast24h);
-      } else {
+      } else if (tab.dataset.forecast === '5d') {
         renderForecast(forecast5d);
       }
     });
   });
 
-  // Initialize with 24 hours
+  forecastList.addEventListener('scroll', updateArrowsState);
+  window.addEventListener('resize', updateArrowsState);
+
   renderForecast(forecast24h);
 }

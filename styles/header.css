@@ -76,6 +76,9 @@
   display: block;
   width: 16px;
   height: 16px;
+  background-color: #545454;
+  -webkit-mask: url('../public/icons/input/search.svg') center / contain no-repeat;
+  mask: url('../public/icons/input/search.svg') center / contain no-repeat;
   pointer-events: none;
 }
 

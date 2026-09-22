@@ -32,20 +32,20 @@ export function renderWeatherDetails(weatherDetailsData) {
       const isWind = data.icon === 'wind';
       let iconName = data.icon;
       let pathParts = [CONFIG.paths.baseIcons];
-      let extension = '.png';
+      let extension = '.svg';
 
       if (isWind) {
         const directionKey = data.direction || '';
         const angle = CONFIG.windDirections[directionKey] || 0;
         iconName = 'direction';
-        extension = '.svg';
         iconEl.style.transform = `rotate(${angle}deg)`;
       }
 
       pathParts.push(`${iconName}${extension}`);
+      const fullPath = pathParts.join('/').replace(/\/+/g, '/');
 
-      iconEl.src = pathParts.join('/').replace(/\/+/g, '/');
-      iconEl.alt = data.title;
+      iconEl.style.webkitMask = `url('${fullPath}') center / contain no-repeat`;
+      iconEl.style.mask = `url('${fullPath}') center / contain no-repeat`;
     }
 
     const textEl = cardClone.querySelector(`.${CONFIG.cardClasses.text}`);
@@ -78,11 +78,8 @@ export function renderWeatherDetails(weatherDetailsData) {
 
         progressBarEl.style.setProperty('--progress', `${safeValue}%`);
 
-        if (data.title === 'Давление') {
-          progressBarEl.style.setProperty(
-            '--progress-bg',
-            'radial-gradient(50% 9453.13% at 50% 50%, rgba(84, 84, 84, 0.4) 0%, rgba(138, 138, 138, 0.4) 45.12%, #DADADA 100%, rgba(218, 218, 218, 0.4) 100%)',
-          );
+        if (data.icon) {
+          progressBarEl.classList.add(`weather-details__progress-bar_type_${data.icon}`);
         }
       } else {
         progressBarEl.remove();

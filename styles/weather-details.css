@@ -44,6 +44,7 @@
   width: 24px;
   height: 24px;
   opacity: 0.7;
+  background-color: rgba(32, 32, 32, 1);
 }
 
 .weather-details__value {
@@ -92,6 +93,10 @@
     black 5px
   );
   mask-image: radial-gradient(circle at var(--progress, 0%) 50%, transparent 4px, black 5px);
+}
+
+.weather-details__progress-bar_type_pressure {
+  --progress-bg: radial-gradient(50% 9453.13% at 50% 50%, rgba(84, 84, 84, 0.4) 0%, rgba(138, 138, 138, 0.4) 45.12%, #DADADA 100%, rgba(218, 218, 218, 0.4) 100%);
 }
 
 .progress-thumb {

@@ -1,4 +1,4 @@
 # WeatherApp
 
-Ник — lindsyro 
+Ник — lindsyro
 Имя — Ирина
