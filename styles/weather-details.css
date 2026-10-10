@@ -96,7 +96,13 @@
 }
 
 .weather-details__progress-bar_type_pressure {
-  --progress-bg: radial-gradient(50% 9453.13% at 50% 50%, rgba(84, 84, 84, 0.4) 0%, rgba(138, 138, 138, 0.4) 45.12%, #DADADA 100%, rgba(218, 218, 218, 0.4) 100%);
+  --progress-bg: radial-gradient(
+    50% 9453.13% at 50% 50%,
+    rgba(84, 84, 84, 0.4) 0%,
+    rgba(138, 138, 138, 0.4) 45.12%,
+    #dadada 100%,
+    rgba(218, 218, 218, 0.4) 100%
+  );
 }
 
 .progress-thumb {

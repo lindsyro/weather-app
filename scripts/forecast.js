@@ -29,7 +29,7 @@ export function initForecast(forecast24h, forecast5d) {
       if (wrapper) wrapper.classList.add('forecast__list-wrapper_mask_right');
     }
   }
-
+  
   function renderForecast(data) {
     forecastList.innerHTML = '';
     const forecastFragment = document.createDocumentFragment();

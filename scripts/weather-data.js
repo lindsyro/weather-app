@@ -64,4 +64,5 @@ export const forecast5d = [
   { time: 'Пн, 08 янв.', icon: '02d', temp: 'от -16° до -8°' },
   { time: 'Вт, 09 янв.', icon: '04d', temp: 'от -8° до -2°' },
   { time: 'Ср, 10 янв.', icon: '04d', temp: 'от -9° до -14°' },
+  { time: 'Чт, 11 янв.', icon: '04d', temp: 'от -9° до -14°' },
 ];

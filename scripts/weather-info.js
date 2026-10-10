@@ -16,7 +16,7 @@ export function renderWeatherInfo(data) {
   if (mainIcon && data.condition) {
     const iconName = CONFIG.weatherIcons[data.condition];
 
-    mainIcon.src = `../public/icons/weather/${iconName}.svg`;
+    mainIcon.src = `public/icons/weather/${iconName}.svg`;
     mainIcon.alt = data.weather;
 
     Object.entries(data).forEach(([key]) => {
