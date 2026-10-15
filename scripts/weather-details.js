@@ -60,17 +60,17 @@ export function renderWeatherDetails(weatherDetailsData) {
     const progressBarEl = cardClone.querySelector(`.${CONFIG.cardClasses.progressBar}`);
 
     if (progressBarEl) {
-      const hasProgressBar = ['Влажность', 'Давление', 'Видимость'].includes(data.title);
+      const hasProgressBar = ['humidity', 'pressure', 'visibility'].includes(data.icon);
 
       if (hasProgressBar) {
         let progressValue = 0;
         const num = parseFloat(data.value);
 
-        if (data.title === 'Влажность') {
+        if (data.icon === 'humidity') {
           progressValue = num;
-        } else if (data.title === 'Давление') {
+        } else if (data.icon === 'pressure') {
           progressValue = ((num - 740) / (770 - 740)) * 100;
-        } else if (data.title === 'Видимость') {
+        } else if (data.icon === 'visibility') {
           progressValue = (num / 100) * 100;
         }
 

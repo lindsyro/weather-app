@@ -8,7 +8,6 @@ export const CONFIG = {
     listContainer: '.weather-details',
     template: '[data-weather-card-template]',
     cardElementPrefix: 'weather-details__',
-    logo: '.logo__img',
   },
 
   cardClasses: {

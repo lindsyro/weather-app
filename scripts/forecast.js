@@ -29,7 +29,7 @@ export function initForecast(forecast24h, forecast5d) {
       if (wrapper) wrapper.classList.add('forecast__list-wrapper_mask_right');
     }
   }
-  
+
   function renderForecast(data) {
     forecastList.innerHTML = '';
     const forecastFragment = document.createDocumentFragment();
@@ -41,7 +41,10 @@ export function initForecast(forecast24h, forecast5d) {
       const iconEl = cardClone.querySelector('.forecast__icon');
       const tempEl = cardClone.querySelector('.forecast__temp');
 
-      if (timeEl) timeEl.textContent = item.time;
+      if (timeEl) {
+        timeEl.textContent = item.time;
+        timeEl.setAttribute('datetime', item.datetime || item.time);
+      }
       if (iconEl && item.icon) {
         iconEl.src = `public/icons/weather/${item.icon}.svg`;
         iconEl.alt = 'Погода';

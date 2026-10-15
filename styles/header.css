@@ -97,10 +97,6 @@
     max-width: 608px;
     gap: 135px;
   }
-
-  .search {
-    max-width: 409px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -168,42 +164,6 @@
 
 @media (min-width: 1280px) {
   .weather-app__header {
-    max-width: none;
     width: 1120px;
-    height: 112px;
-    padding: 32px;
-  }
-
-  .logo__img {
-    width: 192px;
-    height: 48px;
-  }
-
-  .search {
-    width: 506px;
-    max-width: none;
-    height: 48px;
-    padding: 12px 16px;
-    gap: 16px;
-  }
-
-  .search__input {
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .search__button {
-    width: 24px;
-    height: 24px;
-  }
-
-  .search__icon_type_close {
-    width: 24px;
-    height: 24px;
-  }
-
-  .search__icon_type_search {
-    width: 24px;
-    height: 24px;
   }
 }

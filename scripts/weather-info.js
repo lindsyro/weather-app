@@ -19,10 +19,15 @@ export function renderWeatherInfo(data) {
     mainIcon.src = `public/icons/weather/${iconName}.svg`;
     mainIcon.alt = data.weather;
 
-    Object.entries(data).forEach(([key]) => {
+    Object.entries(data).forEach(([key, value]) => {
+      if (key === 'condition') return;
+
       const element = document.querySelector(`.weather-info__${key}`);
-      if (element && data[key] !== undefined) {
-        element.textContent = data[key];
+      if (element && value !== undefined) {
+        element.textContent = value;
+        if (key === 'time') {
+          element.setAttribute('datetime', value);
+        }
       }
     });
   }
